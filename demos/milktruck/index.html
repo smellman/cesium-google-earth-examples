@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-us">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -44,6 +44,10 @@
         var currentTime = new Cesium.JulianDate(2457064, 13662.710572260446);
 
         var viewer = new Cesium.Viewer('cesiumContainer', {
+            imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+              url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
+              credit: new Cesium.Credit('国土地理院', '', 'http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html')
+             }),
             animation: false,
             geocoder: false,
             homeButton: false,
@@ -178,7 +182,7 @@
             findHeight(lon, lat, 9, height);
         }
 
-        teleportTo(-123.0744619, 44.0503706);
+        teleportTo(139.934596, 35.245200);
     </script>
 
     <table class="bottomControls">
@@ -193,10 +197,10 @@
                     </form>
 
                     Presets:
-                    <input type="button" class="cesium-button" value="Whistler" onclick="teleportTo(-122.855824,50.085734);">
-                    <input type="button" class="cesium-button" value="Grand Canyon" onclick="teleportTo(-112.7422594,36.3079874);">
-                    <input type="button" class="cesium-button" value="Meteor Crater" onclick="teleportTo(-111.02255803482507,35.03285647546941);">
-                    <input type="button" class="cesium-button" value="El Capitan" onclick="teleportTo(-119.63751256720771,37.733875309213396);">
+                    <input type="button" class="cesium-button" value="長野県南佐久郡佐久穂町大字大日向" onclick="teleportTo(138.529701,36.147578);">
+                    <input type="button" class="cesium-button" value="富士山" onclick="teleportTo(139.905860,36.425854);">
+                    <input type="button" class="cesium-button" value="太田" onclick="teleportTo(137.012408,35.632709);">
+                    <input type="button" class="cesium-button" value="INN" onclick="teleportTo(140.084611,36.104639);">
                 </div>
 
 
